@@ -1,7 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export const SearchInput = () => {
-  return (
-    <input type="text" />
-  )
+interface Props {
+	onType: (e: any) => void;
+	value: string;
 }
+export const SearchInput = ({ onType, value }: Props) => {
+	return <input type="text" onChange={onType} value={value} />;
+};
